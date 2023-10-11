@@ -29,49 +29,37 @@ Juego elegido: 3 en raya
     `ganador(L)`
 
 Ejemplo de juego:
-
-?- *inicializar.*  % Inicializar el juego
-
+?- *inicializar()*.
 true.
 
-?- *jugador1(1).*  % Jugador 1 coloca en la casilla 1
-
+?- *jugador1(1).*
 true.
 
-?- *jugador2(3).*  % Jugador 1 coloca en la casilla 1
-
+?- *jugador2(4).*
 true.
 
-?- *jugador1(2).*  % Jugador 1 coloca en la casilla 2
-
+?- *jugador1(2).*
 true.
 
-?- *jugador2(6).*  % Jugador 1 coloca en la casilla 1
+?- *jugador2(2).* Intenta rellenar una casilla que el jugador 1 ha marcado previamente
+<span style="color:red">false.</span>
 
+?- *jugador2(5).*
 true.
 
-?- *jugador1(3).*  % Jugador 1 coloca en la casilla 3
+?- *jugador1(2).* Intenta rellenar una casilla marcada por sí mismo anteriormente
+<span style="color:red">false.</span>
 
+?- *jugador1(3).* Rellena [1,2,3] --> Ha ganado
+Â¡Has ganado!
 true.
 
-?- *jugador2(7).*  % Jugador 1 coloca en la casilla 1
+Ver las casillas marcadas:
+?- *leer_lista1(L).*
+L = [3, 2, 1].
 
-true.
-
-?- leer_lista1(Lista1).  % Verificar el estado de la lista 1
-
-Lista1 = [3, 2, 1].
-
-?- leer_lista1(Lista2).  % Verificar el estado de la lista 1
-
-Lista1 = [7, 6, 3].
-
-?- ganaste(Lista1).  % Verificar si el jugador 1 ha ganado
-
-¡Has ganado!
-true.
-
-
+?- *leer_lista2(L).*
+L = [5, 4].
 
 ## Procedimiento del programa
 - jugador1(4) --> El jugador 1 rellena la casilla 4, dicha información se almacena en la lista 1
@@ -132,5 +120,7 @@ jugador1(N) :-
 ```
         - Elemento de un conjunto:
 `esta_en_conjunto(Elemento, Conjunto) :- member(Elemento, Conjunto).`
+
+    Además a la hora de verificar el ganador no se pueden utilizar métodos como subset que te indica si una lista tiene los mismos elemntos que otra. 
 
     
