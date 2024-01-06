@@ -50,9 +50,9 @@ Es eficaz en problemas de clasificación, especialmente cuando la separación en
 1. Entre en la carpeta "PR_3_IA"
 2. Pinche en el archivo "PracticaIA_3_final.ipynb"
 3. Abra el colab clicando en "Open in Colab" 
-[!](img_abrir_colab.png)
-4. Seleccione el icono de la carpeta
-[!](icono_carpeta.png)
-5. Suba el archivo "salary.csv"
-[!](subir_archivo.png)
+![Alt text](img_abrir_colab.png)
+4. Seleccione el icono de la carpeta\
+![Alt text](icono_carpeta.png)
+5. Suba el archivo "salary.csv"\
+![Alt text](subir_archivo.png)
 6. Proceda a ejecutar cada contenedor de código
